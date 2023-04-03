@@ -1,20 +1,16 @@
+# Neither the config file or its backup should go
+# into the repo.
+config/config.inc.php.bak
+config/config.inc.php
 
-###> symfony/framework-bundle ###
-/.env.local
-/.env.local.php
-/.env.*.local
-/config/secrets/prod/prod.decrypt.private.php
-/public/bundles/
-/var/
+Dockerfile
+
+# Vim swap files
+.*swp
+
+# VS Code editor files
+*.code-workspace
+
+# Used by pytest
+tests/__pycache__/
 /vendor/
-###< symfony/framework-bundle ###
-
-###> phpunit/phpunit ###
-/phpunit.xml
-.phpunit.result.cache
-###< phpunit/phpunit ###
-
-###> symfony/phpunit-bridge ###
-.phpunit.result.cache
-/phpunit.xml
-###< symfony/phpunit-bridge ###

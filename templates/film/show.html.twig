@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+	{% block title %}Un film {% endblock %}
+
+	{% block main %}
+		<h2 class="text-center bg-light p-3">Détails pour le film : {{ film }} </h2>
+		
+		<table class="table w-75 mx-auto">
+			<tbody>
+				<tr class="row">
+					<td class="col-4">id : </td>
+					<td class="col-8">{{ film.id }}</td>
+				</tr>
+				<tr class="row">
+					<td class="col-4">Titre : </td>
+					<td class="col-8">{{ film.title }}</td>
+				</tr>
+				<tr class="row">
+					<td class="col-4">Année : </td>
+					<td class="col-8">{{ film.year }}</td>
+				</tr>
+				<tr class="row">
+					<td class="col-4">Commentaires pour ce film : </td>
+					{% if comments|length > 0 %}
+						<td class="col">
+						<table class="table">
+						{% for comment in comments %}
+								<td class="row">
+								{{ comment.comment }} - {{ comment.createdAt|format_datetime('short', 'none',  locale='fr') }}
+								</td>
+						{% endfor %}
+						</table>
+						</td>
+					{% else %}
+						<td class="col-8"><em>Pas encore de commentaires pour ce film</em></td>
+					{% endif %}
+				</tr>
+			</tbody>
+		</table>	
+		
+	{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+{% block main %}
+<br/>
+	<h2 class="text-center bg-light p-3">Liste de films</h2>
+	<p class="text-center m-3">Cliquez sur un titre pour voir les commentaires concernant ce film.</p>
+	<table class="table w-50 mx-auto">
+		<thead>
+			<tr>
+				<th>Titre</th>
+				<th>Year</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for film in films %}	
+			<tr>
+				<td><a href="{{path('film', {id:film.id})}}">{{ film.title }} </a></td>
+				<td>{{ film.year  }} </td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+	<div class='d-flex justify-content-center'>
+		{{ knp_pagination_render(films,'pagination.twig.html') }}
+	</div>
+{% endblock %}

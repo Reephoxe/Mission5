@@ -7,12 +7,17 @@
         "php": ">=7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "camurphy/bootstrap-menu-bundle": "^1.5",
         "doctrine/annotations": "^2.0",
         "doctrine/doctrine-bundle": "^2.8",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.14",
+        "easycorp/easyadmin-bundle": "^4.6",
+        "halloverden/symfony-doctrine-sql-logger-bundle": "^1.2",
+        "knplabs/knp-paginator-bundle": "*",
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.16",
+        "platformsh/symfonyflex-bridge": "^2.7",
         "sensio/framework-extra-bundle": "^6.1",
         "symfony/asset": "5.4.*",
         "symfony/console": "5.4.*",
@@ -41,6 +46,7 @@
         "symfony/web-link": "5.4.*",
         "symfony/yaml": "5.4.*",
         "twig/extra-bundle": "^2.12|^3.0",
+        "twig/intl-extra": "^3",
         "twig/twig": "^2.12|^3.0"
     },
     "config": {
@@ -93,6 +99,7 @@
         }
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.4",
         "phpunit/phpunit": "^9.5",
         "symfony/browser-kit": "5.4.*",
         "symfony/css-selector": "5.4.*",

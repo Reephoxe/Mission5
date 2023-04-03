@@ -1,0 +1,10 @@
+bootstrap_menu:
+  menus:
+    main:
+      items:
+        films:
+          label: 'Les films'
+          route: 'home'
+        test:
+          label: 'Test'
+          route: 'app_test'
